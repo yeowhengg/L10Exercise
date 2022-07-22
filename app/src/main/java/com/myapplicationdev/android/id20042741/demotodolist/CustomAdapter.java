@@ -58,11 +58,8 @@ public class CustomAdapter extends ArrayAdapter {
 
         // Set values to the TextView to display the corresponding information
         tvToDo.setText(currentVersion.getTitle());
-        
-        String fullDate = String.format("%d/%d/%d", currentVersion.getDate().get(Calendar.DATE),
-                currentVersion.getDate().get(Calendar.MONTH), currentVersion.getDate().get(Calendar.YEAR));
+        tvDate.setText(currentVersion.toString());
 
-        tvDate.setText(fullDate);
         return rowView;
     }
 
